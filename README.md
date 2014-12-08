@@ -21,14 +21,14 @@ Node.js --> http://nodejs.org/
 
 2. Open a Terminal in the root directory.
 
-3. Install dependencies
+4. Install dependencies
 ```sh
 $ npm install
 ```
 
-4. Run the server
+5. Run the server
 ```sh
 $ node server
 ```
 
-5. Open a web browser to http://localhost:3000
+6. Open a web browser to http://localhost:3000
