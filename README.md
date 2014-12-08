@@ -21,10 +21,7 @@ Node.js --> http://nodejs.org/
 
 2. Open a Terminal in the root directory of the app.
 
-4. Install dependencies
-```sh
-$ npm install
-```
+4. Install dependencies via ```sh $ npm install ```
 
 5. Run the server
 ```sh
