@@ -1,104 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="tissueApp">
   <head>
     <title>Tissue Tracker</title>
 
-    <!-- COPY EVERYTHING BELOW THIS LINE INTO EVERY ASSOCIATED PAGE -->
-
-    <!-- CSS for Bootstrap (the whole point of using Bootstrap for this site) -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/cerulean/bootstrap.min.css">
-
   </head>
 
-  <body style="padding-top:50px;">
-    <!-- HEADER BAR (goes on each page) -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
+  <body>
 
-          <!-- Mobile browser (iOS/Android) site navigation toggles -->
-          <button type="button" class="navbar-toggle collapsed"
-          data-toggle="collapse" data-target=".navbar-collapse">
-
-            <!-- Text-only nav button for users with bandwidth issues -->
-            <span class="sr-only">Toggle navigation</span>
-
-            <!-- One icon bar per HTML page -->
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-
-          </button>
-
-          <!-- Link to home page -->
-          <a class="navbar-brand" href="./index.html">History of Python</a>
-		  
-		</div> <!-- /.navbar-header -->
-
-          <!-- Links to other pages -->
-          <div class="navbar-collapse collapse" style="height: 1px;">
-            <ul class="nav navbar-nav">
-
-              <!-- CHANGE ACTIVE CLASS TO WHATEVER THE CURRENT PAGE IS! -->
-              <li class="active"><a href="./index.html">Home</a></li>
-			  
-			  <!-- Questions 1/2 - 1st link -->
-              <li><a href="./development.html">Development</a></li>
-			  
-			  <!-- Questions 3/4/5 - 2nd link -->
-			  <li><a href="./about_python.html">About the Language</a></li>
-			  
-			  <!-- Questions 6/7 - 3rd link -->
-              <li><a href="./why.html">Why Python</a></li>
-			  
-			  <!-- Sources cited - 4th link -->
-			  <li><a href="./sources.html">Sources Cited</a></li>
-            </ul>
-          </div> <!-- ./nav-collapse -->
+      <!-- Meetups View -->
+      <div ng-controller="meetupsController">
+        <h1>There are {{tissues.length}} tissues</h1>
+        <ul>
+          <li ng-repeat="tissue in tissues">
+            {{tissue.issue}}
+          </li>
+        </ul>
+        <form ng-submit="createTissue()">
+          <input type="text" placeholder="What's your tissue?" ng-model="tissueName"></input>
+          <button type="submit">Add Tissue</button>
+        </form> 
       </div>
-    </div>
 
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-resource.js"></script>
 
-
-    <!-- CONTENT GOES BELOW THIS LINE -->
-
-    <div class="container">
-		<div style="padding:40px 15px;">
-			<div style=" text-align:center;">
-				<h1>History of Python</h1>
-				<p class="lead">This is a quick history of the Python programming language.
-				<br>
-				Click on one of the links above to find out about the different aspects
-				of it's history.
-				
-				<br>
-				<br>
-				<br>
-				
-				This page was created by Steven Bock and Nathan Mayor for CSCE 343, Programming Languages
-				<br>
-				at <a href="http://www.plu.edu">Pacific Lutheran University</a>.
-				</p>
-				
-				<p>Last updated September 15th, 2014.</p>
-			</div>
-		</div>
-	</div>
-
-    <!-- 
-	=================================================================
-	SCRIPTS -  LAST TO BE LOADED SO THE CONTENT WILL ALWAYS LOAD ON 
-	THE SLOWEST OF CONNECTIONS 
-	=================================================================
-	-->
-	
-	<!-- jQuery (dependency for Bootstrap) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-    <!-- Bootstrap Javascript (BRAINZ) -->
-    <script src="/js/bootstrap/bootstrap.min.js"></script>
+      <script type="text/javascript" src="/js/app.js"></script>
+      <script type="text/javascript" src="/js/controllers/tissue-controller.js"></script>
 
   </body>
 </html>
