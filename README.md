@@ -16,3 +16,19 @@ AngularJS > https://angularjs.org/
 Node.js --> http://nodejs.org/
 
 ### SETUP
+
+1. Install Mongodb using your preferred installation method. Possible methods include apt or rpm on Linux, Homebrew or Macports on OS X, and binary files on Windows.
+
+2. Open a Terminal in the root directory.
+
+3. Install dependencies
+```sh
+$ npm install
+```
+
+4. Run the server
+```sh
+$ node server
+```
+
+5. Open a web browser to http://localhost:3000
