@@ -19,7 +19,7 @@ Node.js --> http://nodejs.org/
 
 1. Install Mongodb using your preferred installation method. Possible methods include apt or rpm on Linux, Homebrew or Macports on OS X, and binary files on Windows.
 
-2. Open a Terminal in the root directory.
+2. Open a Terminal in the root directory of the app.
 
 4. Install dependencies
 ```sh
