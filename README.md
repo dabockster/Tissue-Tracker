@@ -9,7 +9,7 @@ For those of you who don't know what I'm talking about:
 
 Mongodb --> http://www.mongodb.org/
 
-Express --> http://expressjs.com/
+Express ---> http://expressjs.com/
 
 AngularJS > https://angularjs.org/
 
