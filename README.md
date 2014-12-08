@@ -31,4 +31,4 @@ $ npm install
 $ node server
 ```
 
-6. Open a web browser to http://localhost:3000
+6. Open a web browser to <http://localhost:3000>
