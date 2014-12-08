@@ -8,8 +8,11 @@ This is a small program created to demonstrate the common capabilities of the ME
 For those of you who don't know what I'm talking about:
 
 Mongodb --> http://www.mongodb.org/
+
 Express --> http://expressjs.com/
+
 AngularJS > https://angularjs.org/
+
 Node.js --> http://nodejs.org/
 
 ### SETUP
