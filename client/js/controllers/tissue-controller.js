@@ -1,13 +1,13 @@
-app.controller('tissueController', ['$scope', '$resource', function($scope, $resource){
+app.controller('tissueController', ['$scope', '$resource', function ($scope, $resource){
 	var Tissue = $resource('/api/tissues');
 
-	Tissue.query(function(results){
+	Tissue.query(function (results){
 		$scope.tissues = results;
 	});
 
 	$scope.tissues = [];
 
-	$scope.createTissue = function(){
+	$scope.createTissue = function () {
 		var tissue = new Tissue();
 		tissue.issue = $scope.tissueName;
 		tissue.$save(function(result){

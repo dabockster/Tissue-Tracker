@@ -32,8 +32,8 @@ app.get('/', function(req, res){
 });
 
 //redirect HTTP requests to correct directories
-app.use('/js', express.static(app_root + '/client/js'));
-app.use('/css', express.static(app_root + '/client/css'));
+app.use('/js', express.static(app_root + '/js'));
+app.use('/css', express.static(app_root + '/css'));
 
 //API
 app.get('/api/tissues', tissueController.list);
