@@ -4,7 +4,7 @@
   "description": "PLU CSCE 343 Final Project",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"ERROR: No test specified\" && exit 1",
+    "test": "echo \"ERROR: No test specified!\" && exit 1",
     "start": "node server.js"
   },
   "author": "Steven Bock",
