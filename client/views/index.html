@@ -10,9 +10,9 @@
   <body>
 
       <!-- Meetups View -->
-      <div ng-controller="tissueController" style="text-align: center;">
+      <div ng-controller="tissueController" style="text-align: center; padding-top:50px;">
         <h1>{{ tissues.length }} issue(s) present</h1>
-        <ul>
+        <ul style="list-style-type: none;">
           <li ng-repeat="tissue in tissues" id="issues">
             {{tissue.issue}}
           </li>
@@ -30,7 +30,7 @@
 
       <script type="text/javascript" src="/js/app.js"></script>
       <script type="text/javascript" src="/js/controllers/tissue-controller.js"></script>
-      <script type="text/javascript" src="/js/webpage.js"></script>
+    
 
   </body>
 </html>
