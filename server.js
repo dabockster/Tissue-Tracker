@@ -6,7 +6,7 @@
 
 //dependencies
 var express				= require('express'), //Express.js webserver
-	app_root			= __dirname + "/client", //placeholder for folder path
+	app_root			= __dirname, //placeholder for folder path
 	fs					= require('fs'), //Node.js filesystem library
 	morgan				= require('morgan'),	//HTTP request console logger
 	errorhandler		= require('errorHandler'), //error logger
@@ -28,12 +28,12 @@ app.use(errorhandler( { dumpExceptions: true, showStack: true } ) );
 //HTTP request to index.html
 app.get('/', function(req, res){
 	//send index.html on GET request
-	res.sendFile(app_root + '/views/index.html');
+	res.sendFile(app_root + '/client/views/index.html');
 });
 
 //redirect HTTP requests to correct directories
-app.use('/js', express.static(app_root + '/js'));
-app.use('/css', express.static(app_root + '/css'));
+app.use('/js', express.static(app_root + '/client/js'));
+app.use('/css', express.static(app_root + '/client/css'));
 
 //API
 app.get('/api/tissues', tissueController.list);
