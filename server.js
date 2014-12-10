@@ -11,6 +11,7 @@ var express				= require('express'), //Express.js webserver
 	morgan				= require('morgan'),	//HTTP request console logger
 	errorhandler		= require('errorHandler'), //error logger
 	mongoose			= require('mongoose'), //MongoDB DBMS driver
+	bodyParser			= require('body-parser'), //easy reading of JSON encoding
 	tissueController 	= require('./server/controllers/tissue-controller'); //AngularJS controller (MVC style)
 
 //initialize db connection
@@ -18,6 +19,9 @@ mongoose.connect('mongodb://localhost:27017/343-demo');
 
 //initialize Express server
 var app = express();
+
+//JSON dependency
+app.use(bodyParser.json());
 
 //log EVERY HTTP request to the console
 app.use(morgan('dev'));

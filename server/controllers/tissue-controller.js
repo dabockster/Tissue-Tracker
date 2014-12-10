@@ -9,7 +9,7 @@ module.exports.create = function(req, res){
 };
 
 module.exports.list = function (req, res){
-	Tissue.find({}, function (err, results) {
-    	res.json(results);
+	Tissue.find({}, function (err, tissues) {
+    	res.json(tissues);
   });
 };

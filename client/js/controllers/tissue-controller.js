@@ -9,10 +9,10 @@ app.controller('tissueController', ['$scope', '$resource', function ($scope, $re
 
 	$scope.createTissue = function () {
 		var tissue = new Tissue();
-		tissue.issue = $scope.tissueName;
+		tissue.issue = $scope.tissueIssue;
 		tissue.$save(function (result){
 			$scope.tissues.push(result);
-			$scope.tissueName = '';
+			$scope.tissueIssue = '';
 		});
 	};
 }]);

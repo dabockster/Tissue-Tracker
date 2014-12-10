@@ -2,21 +2,20 @@
 <html ng-app="tissueApp">
   <head>
     <title>Tissue Tracker</title>
-
   </head>
 
   <body>
 
       <!-- Meetups View -->
       <div ng-controller="tissueController">
-        <h1>There are {{tissues.length}} tissues</h1>
+        <h1>{{ tissues.length }} issue(s) present</h1>
         <ul>
           <li ng-repeat="tissue in tissues">
             {{tissue.issue}}
           </li>
         </ul>
         <form ng-submit="createTissue()">
-          <input type="text" placeholder="What's your issue?" ng-model="tissueName"></input>
+          <input type="text" placeholder="What's your issue?" ng-model="tissueIssue"></input>
           <button type="submit">Grab a Tissue!</button>
         </form> 
       </div>
