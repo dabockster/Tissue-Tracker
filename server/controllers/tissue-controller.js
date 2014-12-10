@@ -3,13 +3,13 @@ var Tissue = require('../models/tissue');
 
 module.exports.create = function(req, res){
 	var tissue = new Tissue(req.body);
-	tissue.save(function(err, result){
-		res.json(result);
+	tissue.save(function (err, result) {
+    	res.json(result);
 	});
 };
 
 module.exports.list = function(req, res){
-	Tissue.find({}, function(err, results){
-		res.json(results);
-	});
+	Tissue.find({}, function (err, results) {
+    	res.json(results);
+  });
 };

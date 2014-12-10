@@ -9,9 +9,9 @@ var express				= require('express'), //Express.js webserver
 	app_root			= __dirname + "/client", //placeholder for folder path
 	fs					= require('fs'), //Node.js filesystem library
 	morgan				= require('morgan'),	//HTTP request console logger
-	errorhandler		= require('errorHandler'),
-	mongoose			= require('mongoose'),
-	tissueController 	= require('./server/controllers/tissue-controller'); //build/stack error dumper
+	errorhandler		= require('errorHandler'), //error logger
+	mongoose			= require('mongoose'), //MongoDB DBMS driver
+	tissueController 	= require('./server/controllers/tissue-controller'); //AngularJS controller (MVC style)
 
 //initialize db connection
 mongoose.connect('mongodb://localhost:27017/343-demo');
