@@ -15,7 +15,7 @@ module.exports.create = function(req, res){
 module.exports.list = function (req, res){
 	//grab tissues from database
 	Tissue.find({}, function (err, tissues) {
-		//recieve as JSON
+		//receive as JSON
     	res.json(tissues);
   });
 };
